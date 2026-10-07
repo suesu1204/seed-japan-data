@@ -1,0 +1,7 @@
+# 원본·대용량 (재취득/재생성 가능. README 참고)
+Reinfolib/raw/
+Chika(지가공시)/*.zip
+output/chika_points/
+output/torihiki_points/
+scripts/__pycache__/
+*.pyc
