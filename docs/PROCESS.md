@@ -80,7 +80,6 @@ Data/
 │   ├─ chika_points/
 │   │   └─ chika_2010.csv … chika_2026.csv   ③-1 출력: 지점별 (17개, 9컬럼)
 │   ├─ chika_muni.csv                  ③-2 출력: 전국 (year, muni_code) 집계 (25,920행, 21컬럼)
-│   ├─ jp_kaso_pop_chika.csv           ③-3 출력: 과소 727곳 × 17년 인구 + 지가공시 (12,359행, 95컬럼)
 │   └─ chika_kaso.csv                  ③-3 출력: 과소 727곳 × 17년 지가공시만 (12,359행, 25컬럼). 인구와 합치지 않음
 ├─ final_result/              최종 결과 (2026-10-08 복사본. 원본은 위 경로에 그대로)
 │   ├─ jp_pop_kaso.csv            인구 (727곳 × 17년, 76열)       = 과소지역_매칭/jp_pop_kaso.csv
@@ -653,7 +652,7 @@ H1의 **종속변수 2**다. 종속변수 1인 실거래가(②, reinfolib)는 A
 `과소지역_매칭/jp_pop_kaso.csv`(727곳 × 17년, 76컬럼)에 위 집계를 `(year, muni_code)`로 **left join** (인구 행은 전부 유지). 95컬럼, 12,359행.
 지점이 없는 (year, muni_code)는 `n_points = 0`, 가격 컬럼은 빈칸.
 
-**단독 파일** (2026-10-07 추가, 사용자 결정 "인구와 따로 쓰고 싶다"): `output/chika_kaso.csv` — 식별 6열(`year, muni_code, pref, muni, row_type, city_code`) + 집계 19열 = 25열, 727곳 × 17년, `jp_pop_kaso.csv`와 행 순서·`year`·`muni_code` 동일. 실거래가 `torihiki_kaso.csv`와 같은 구조. 합쳐진 파일은 그대로 둠.
+**단독 파일** (2026-10-07 추가, 사용자 결정 "인구와 따로 쓰고 싶다"): `output/chika_kaso.csv` — 식별 6열(`year, muni_code, pref, muni, row_type, city_code`) + 집계 19열 = 25열, 727곳 × 17년, `jp_pop_kaso.csv`와 행 순서·`year`·`muni_code` 동일. 실거래가 `torihiki_kaso.csv`와 같은 구조. 합쳐진 파일 `jp_kaso_pop_chika.csv`는 2026-10-08 사용자 결정으로 **삭제**(중복). 필요하면 두 파일을 `year`+`muni_code`로 결합.
 
 **기준일 주의**: 지가공시는 매년 1월 1일. 인구는 2014년부터 1월 1일이라 같고, **2010~2013 인구는 3월 31일**이라 같은 해 안에서 3개월 차이가 있다 (§1.1).
 

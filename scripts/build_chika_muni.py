@@ -2,7 +2,6 @@
 
 입력: output/chika_points/chika_YYYY.csv (③-1), scripts/code_map_2010_2026.csv (3단계 대응표), 과소지역_매칭/jp_pop_kaso.csv (5단계)
 출력: output/chika_muni.csv           전국 (year, muni_code) 집계. muni_code는 2026년 기준
-      output/jp_kaso_pop_chika.csv    jp_pop_kaso.csv(727곳×17년) + 지가공시 집계 (left join)
       output/chika_kaso.csv           과소 727곳×17년 지가공시만 (식별 6열 + 집계 19열)
 """
 import glob, os
@@ -13,7 +12,6 @@ PTS = os.path.join(ROOT, "output", "chika_points")
 MAP = os.path.join(ROOT, "scripts", "code_map_2010_2026.csv")
 KASO = os.path.join(ROOT, "과소지역_매칭", "jp_pop_kaso.csv")  # 5단계 출력 (사용자가 폴더 이동)
 OUT_MUNI = os.path.join(ROOT, "output", "chika_muni.csv")
-OUT_JOIN = os.path.join(ROOT, "output", "jp_kaso_pop_chika.csv")
 OUT_KASO = os.path.join(ROOT, "output", "chika_kaso.csv")  # 과소 727곳 × 17년, 공시지가만 (인구와 합치지 않음)
 USE_CODES = ["000", "003", "005", "007", "009", "010", "013"]
 
@@ -63,7 +61,6 @@ assert len(join) == len(kaso) == 727 * 17
 join["n_points"] = join.n_points.fillna(0).astype(int)
 for c in [c for c in join.columns if c.startswith("n_u")]:
     join[c] = join[c].fillna(0).astype(int)
-join.to_csv(OUT_JOIN, index=False, encoding="utf-8-sig")
 # 공시지가 단독 파일: 식별 6열 + 집계 19열, 행 순서는 jp_pop_kaso.csv와 동일
 solo = join[["year", "muni_code", "pref", "muni", "row_type", "city_code"] + list(agg.columns.drop(["year", "muni_code"]))].copy()
 for c in [c for c in solo.columns if c.startswith(("price_", "med_"))]:
@@ -77,4 +74,4 @@ never = join.groupby("muni_code").n_points.sum()
 never = never[never == 0]
 always = (join.groupby("muni_code").n_points.min() > 0).sum()
 print(f"727곳 중 17년 전부 지점 있음: {always} | 17년 내내 지점 없음: {len(never)}")
-print(f"saved → {OUT_MUNI} {agg.shape}, {OUT_JOIN} {join.shape}")
+print(f"saved → {OUT_MUNI} {agg.shape}, {OUT_KASO} {solo.shape}")
