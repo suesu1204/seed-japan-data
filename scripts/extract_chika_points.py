@@ -12,7 +12,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, "Chika(지가공시)")
 OUT = os.path.join(ROOT, "output", "chika_points")
 COLS = ["year", "muni_code", "use_code", "seq", "price_per_sqm", "acreage_sqm", "current_use", "lon", "lat"]
-# city_planning은 뺐다: 2010~2017은 여러 법규제가 한 태그에 섞여 있어 2018+의 urbanPlanningArea와 해석 없이 대응 불가 (README §7)
+# city_planning은 뺐다: 2010~2017은 여러 법규제가 한 태그에 섞여 있어 2018+의 urbanPlanningArea와 해석 없이 대응 불가 (docs/PROCESS.md §7)
 # 용도구분 코드 (reinfolib XPT002 API 설명서 useCategoryCode): 00 住宅地, 03 宅地見込地, 05 商業地, 07 準工業地,
 # 09 工業地, 10 市街化調整区域内の現況宅地, 13 市街化調整区域内の現況林地. GML에는 3자리(000…)로 들어 있음.
 USE_CODES = {"000", "003", "005", "007", "009", "010", "013"}
