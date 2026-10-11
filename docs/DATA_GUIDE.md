@@ -1,6 +1,37 @@
 # 데이터셋 설명 (DATA_GUIDE)
 
-최종 파일 3개(`final_result/`)를 데이터별로 **출처 → 원본 생김새 → 원본 열 → CSV 열 → 코드 뜻 → 연도별 통일 → 최종 열** 순으로 설명한다. 작업 과정과 검사 결과는 [PROCESS.md](PROCESS.md).
+> **2026-10-11 갱신**: 최종 파일은 `final_result2/`(전국 1,741곳, 시정촌+도쿄 23구)이다. 아래 1~3절의 출처·원본·열 대응·코드·연도별 통일 설명은 그대로 유효하고, 달라진 점은 §0에 적는다. `final_result/`(과소 727곳)는 이전 버전.
+
+## 0. 전국 버전 (`final_result2/`) — 이전 버전과 다른 점
+
+| 항목 | 이전 (`final_result/`) | 현재 (`final_result2/`) |
+|---|---|---|
+| 지역 | 과소 727곳 | 전국 1,741곳 = 시 792(정령시 20은 시 전체) + 도쿄 23구 + 정 743 + 촌 183. 과소 여부는 `kaso` 열 |
+| 정령시 | 구 단위 | **시 전체** (한국 시군구가 일반구를 나누지 않으므로). 相模原·熊本·浜松의 옛 연도 빈자리 문제 소멸 → 17년 완전 균형 |
+| 식별 열 | 6~7개 | `year`, `muni_code`만. 이름은 `muni_names.csv` |
+| 인구 | 원자료 69열 | **한국 파일과 같은 12열** (`jp_pop.csv`) + `kaso`. 원자료는 `jp_pop_detail.csv` |
+| 공시지가 열 이름 | `n_u000` … | `n_residential`(주택지) `n_prospective`(택지예정지) `n_commercial`(상업지) `n_semi_industrial`(준공업지) `n_industrial`(공업지) `n_uca_residential`(조정구역 내 택지) `n_uca_forest`(조정구역 내 임지), 중앙값은 `med_…` |
+| 실거래가 | 시정촌×연도 집계 (중앙값) | **거래 건별** 503만 행, 원본 항목만 (`year, quarter, muni_code, type, region, trade_price, area_sqm, unit_price, floor_area_sqm, building_year`). 통계량은 분석 설계 확정 후 계산 |
+
+`jp_pop.csv` 열 (한국 `korea_population_2010_2025.csv`와 대응)
+
+| 일본 열 | 한국 열 | 정의 |
+|---|---|---|
+| `muni_code` | `region_code` | 일본 5자리 / 한국 10자리 법정동코드 |
+| `year` | `year` | |
+| `total_pop` | `total_pop` | 총인구 (일본은 연령불상자 포함 → 네 군 합과 최대 0.2% 차이) |
+| `child_pop`, `child_rate` | 같음 | 0~14세 인구, ÷총인구×100 |
+| `youth_pop`, `youth_rate` | 같음 | 15~34세 |
+| `middle_pop`, `middle_rate` | 같음 | 35~64세 |
+| `elderly_pop`, `elderly_rate` | 같음 | 65세 이상 |
+| `aging_rate` | `aging_rate` | = `elderly_rate` (한국 파일과 같이 중복 유지) |
+| `kaso` | (없음) | 全部過疎 / みなし過疎 / 一部過疎 / 非該当 |
+
+한국 파일에 있고 일본에 없는 것: `region_name`(→ `muni_names.csv`). 일본 기준일은 2010~2013 3/31, 2014~ 1/1 (문서로만 기록). 증가율 열은 양쪽 다 없음.
+
+---
+
+이하는 과소 727곳 버전 기준 설명이며 출처·원본·열 대응은 전국 버전에도 동일하게 적용된다. 최종 파일 3개(`final_result/`)를 데이터별로 **출처 → 원본 생김새 → 원본 열 → CSV 열 → 코드 뜻 → 연도별 통일 → 최종 열** 순으로 설명한다. 작업 과정과 검사 결과는 [PROCESS.md](PROCESS.md).
 
 공통 사항
 - 단위: 시정촌(市町村). 정령시는 구(区) 단위이지만 과소지역에는 정령시가 없어 최종 파일은 시·정·촌뿐이다.
