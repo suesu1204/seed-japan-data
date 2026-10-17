@@ -94,8 +94,7 @@ p = p.drop(columns="med_residential")
 # ---------- 장기차분용 끝점 3년 평균 ----------
 # 끝점 y 의 3년 평균: 2015·2020 은 y-1..y+1, 2010 은 2010..2012, 2025 는 2023..2025. 값 있는 해만 평균.
 p = p.sort_values(["muni_code", "year"]).reset_index(drop=True)
-AVG_COLS = ["log_p_land", "log_p_landbldg", "log_p_condo", "log_p_chika", "log_pop",
-            "child_rate", "youth_rate", "middle_rate", "elderly_rate", "share_15_19", "share_20_34", "share_65_74", "share_75p"]
+AVG_COLS = ["log_p_land", "log_p_landbldg", "log_p_condo", "log_p_chika"]  # 가격만 (인구·비중은 매끄러워 평균 불필요)
 win = {2010: [2010, 2011, 2012], 2015: [2014, 2015, 2016], 2020: [2019, 2020, 2021], 2025: [2023, 2024, 2025]}
 for col in AVG_COLS:
     p[f"avg3_{col}"] = np.nan
