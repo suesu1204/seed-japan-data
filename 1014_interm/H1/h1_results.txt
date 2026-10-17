@@ -1,0 +1,52 @@
+=== 계수표 (coef: 고령화율 1%p 상승 시 log 가격 변화; se_cluster 시정촌 군집, se_dk Driscoll-Kraay) ===
+      model      dep  sample            term    coef  se_cluster  p_cluster  se_dk   p_dk  nobs  n_muni  r2_within
+         FE     land     all      aging_rate -0.0232      0.0064     0.0003 0.0044 0.0000 22786    1657     0.0175
+         FE     land     all   log_total_pop  1.6856      0.1530     0.0000 0.0736 0.0000 22786    1657     0.0175
+         FE     land    kaso      aging_rate -0.0103      0.0142     0.4671 0.0069 0.1310  7140     649     0.0604
+         FE     land    kaso   log_total_pop  1.6128      0.5636     0.0042 0.2807 0.0000  7140     649     0.0604
+         FE     land nonkaso      aging_rate -0.0288      0.0067     0.0000 0.0052 0.0000 15646    1008    -0.0362
+         FE     land nonkaso   log_total_pop  1.6835      0.1878     0.0000 0.0617 0.0000 15646    1008    -0.0362
+FE_interact     land     all      aging_rate -0.0232      0.0063     0.0003 0.0044 0.0000 22786    1657     0.0169
+FE_interact     land     all   log_total_pop  1.7813      0.1874     0.0000 0.0661 0.0000 22786    1657     0.0169
+FE_interact     land     all    aging_x_kaso  0.0033      0.0038     0.3821 0.0027 0.2291 22786    1657     0.0169
+         FE landbldg     all      aging_rate -0.0090      0.0049     0.0635 0.0038 0.0169 21268    1585     0.0421
+         FE landbldg     all   log_total_pop  1.9733      0.1421     0.0000 0.0926 0.0000 21268    1585     0.0421
+         FE landbldg    kaso      aging_rate -0.0100      0.0099     0.3106 0.0066 0.1306  6169     587     0.0730
+         FE landbldg    kaso   log_total_pop  1.5950      0.4819     0.0009 0.3344 0.0000  6169     587     0.0730
+         FE landbldg nonkaso      aging_rate -0.0093      0.0061     0.1299 0.0058 0.1123 15099     998     0.0194
+         FE landbldg nonkaso   log_total_pop  2.1114      0.2318     0.0000 0.2416 0.0000 15099     998     0.0194
+FE_interact landbldg     all      aging_rate -0.0090      0.0049     0.0643 0.0038 0.0166 21268    1585     0.0420
+FE_interact landbldg     all   log_total_pop  2.0151      0.1850     0.0000 0.1569 0.0000 21268    1585     0.0420
+FE_interact landbldg     all    aging_x_kaso  0.0015      0.0033     0.6511 0.0043 0.7337 21268    1585     0.0420
+         FD     land     all    d_aging_rate -0.0366      0.0123     0.0028 0.0169 0.0305 20275    1557    -0.0009
+         FD     land     all d_log_total_pop  0.8204      0.2885     0.0045 0.3268 0.0121 20275    1557    -0.0009
+         FD     land    kaso    d_aging_rate -0.0515      0.0253     0.0420 0.0298 0.0842  5821     554    -0.0000
+         FD     land    kaso d_log_total_pop -0.2032      0.9066     0.8227 0.7307 0.7810  5821     554    -0.0000
+         FD     land nonkaso    d_aging_rate -0.0275      0.0128     0.0322 0.0134 0.0409 14454    1003    -0.0015
+         FD     land nonkaso d_log_total_pop  1.0572      0.3401     0.0019 0.3475 0.0024 14454    1003    -0.0015
+FD_interact     land     all    d_aging_rate -0.0335      0.0117     0.0041 0.0162 0.0385 20275    1557    -0.0007
+FD_interact     land     all d_log_total_pop  0.5986      0.3517     0.0888 0.3348 0.0738 20275    1557    -0.0007
+FD_interact     land     all  d_aging_x_kaso -0.0117      0.0074     0.1137 0.0106 0.2668 20275    1557    -0.0007
+         FD landbldg     all    d_aging_rate -0.0137      0.0114     0.2300 0.0098 0.1621 18709    1454    -0.0010
+         FD landbldg     all d_log_total_pop  1.1502      0.3080     0.0002 0.4968 0.0206 18709    1454    -0.0010
+         FD landbldg    kaso    d_aging_rate -0.0159      0.0242     0.5124 0.0159 0.3188  4893     477     0.0001
+         FD landbldg    kaso d_log_total_pop -0.6374      1.0210     0.5325 1.6170 0.6935  4893     477     0.0001
+         FD landbldg nonkaso    d_aging_rate -0.0205      0.0117     0.0787 0.0155 0.1865 13816     977    -0.0014
+         FD landbldg nonkaso d_log_total_pop  0.7668      0.3496     0.0283 0.6518 0.2394 13816     977    -0.0014
+FD_interact landbldg     all    d_aging_rate -0.0087      0.0109     0.4239 0.0089 0.3265 18709    1454    -0.0007
+FD_interact landbldg     all d_log_total_pop  0.7700      0.3620     0.0334 0.5751 0.1806 18709    1454    -0.0007
+FD_interact landbldg     all  d_aging_x_kaso -0.0207      0.0073     0.0045 0.0090 0.0214 18709    1454    -0.0007
+
+=== 검정 ===
+[Pesaran CD] land: CD = 13.70, p = 0, 시정촌 쌍 1,231,508개, 평균 잔차상관 0.004
+[Hausman] land: H = 197.9, df = 2, p = 0  (FE aging -0.0232 vs RE aging -0.0563)
+[Pesaran CD] landbldg: CD = 0.04, p = 0.966, 시정촌 쌍 1,081,925개, 평균 잔차상관 -0.000
+[Hausman] landbldg: H = 527.8, df = 2, p = 0  (FE aging -0.0090 vs RE aging -0.0650)
+[Fisher ADF] 수준 log_med_land: 시정촌 1,140개, χ²(2280) = 4,463, p = 0, 개별 p<0.05 비율 20.1%
+[Fisher ADF] 1차차분 Δlog_med_land: 시정촌 1,140개, χ²(2280) = 14,713, p = 0, 개별 p<0.05 비율 78.8%
+[Fisher ADF] 수준 log_med_landbldg: 시정촌 1,067개, χ²(2134) = 4,029, p = 0, 개별 p<0.05 비율 20.0%
+[Fisher ADF] 1차차분 Δlog_med_landbldg: 시정촌 1,067개, χ²(2134) = 13,371, p = 0, 개별 p<0.05 비율 80.2%
+[Fisher ADF] 수준 aging_rate: 시정촌 1,741개, χ²(3482) = 11,946, p = 0, 개별 p<0.05 비율 41.7%
+[Fisher ADF] 1차차분 Δaging_rate: 시정촌 1,741개, χ²(3482) = 7,591, p = 0, 개별 p<0.05 비율 22.2%
+
+주의: T=16이라 ADF 검정력 낮음. 공적분 검정(Kao/Pedroni)은 파이썬 미구현으로 생략, FD로 대체.
