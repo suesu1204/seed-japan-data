@@ -11,3 +11,17 @@ final_result2/torihiki.csv
 
 # 한국 담당자 파일 (저장소에 올리지 않음)
 korea_population_*.csv
+
+# 1030_interm2: 거래 건별 재추출(약 200MB, 01_extract_hed.py 로 재생성)
+1030_interm2/hedonic/torihiki_hed.csv
+
+# 외부 자료 (저장소에 올리지 않음)
+Aging_and_real_estate_prices_.pdf
+토지(매매)_실거래가_*.xlsx
+.vscode/
+
+# 재생성 가능한 데이터 파일 (스크립트로 생성)
+1030_interm/panel_filtered.csv
+1030_interm2/panel_v2.csv
+1030_interm2/panel_filtered_v2.csv
+1030_interm2/hedonic/hedonic_index.csv
