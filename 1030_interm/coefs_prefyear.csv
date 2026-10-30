@@ -1,0 +1,73 @@
+﻿table,version,dep,model,term,unit,coef,se_cluster,p,stars,nobs,n_muni,fe
+H1,level,land,pop_only,log_pop,인구 1% 변화당 가격 % 변화,2.03909644494049,0.114616394113572,8.35538125386734e-71,***,22749,1620,muni_code + pref_code^year
+H1,level,land,aging_only,elderly_rate,비중 1%p 변화당 log 가격 변화 (×100 = %),-0.0636964709508926,0.00514970651796211,3.84811010980729e-35,***,22749,1620,muni_code + pref_code^year
+H1,level,land,both,log_pop,인구 1% 변화당 가격 % 변화,1.67330617055186,0.170110071305617,7.83061409632655e-23,***,22749,1620,muni_code + pref_code^year
+H1,level,land,both,elderly_rate,비중 1%p 변화당 log 가격 변화 (×100 = %),-0.0203171159702295,0.00717331851650848,0.004621192931022,***,22749,1620,muni_code + pref_code^year
+H2,level,land,ref_middle,log_pop,인구 1% 변화당 가격 % 변화,1.69741699224009,0.17506308727339,3.13457914977601e-22,***,22749,1620,muni_code + pref_code^year
+H2,level,land,ref_middle,child_rate,비중 1%p 변화당 log 가격 변화 (×100 = %),-0.00141432813407574,0.0130849827118215,0.913925976551984,"",22749,1620,muni_code + pref_code^year
+H2,level,land,ref_middle,youth_rate,비중 1%p 변화당 log 가격 변화 (×100 = %),0.00622545515212947,0.012199521875837,0.609839055459568,"",22749,1620,muni_code + pref_code^year
+H2,level,land,ref_middle,elderly_rate,비중 1%p 변화당 log 가격 변화 (×100 = %),-0.017943632634604,0.00953580835255097,0.0598753058016596,*,22749,1620,muni_code + pref_code^year
+H2,level,land,ref_middle,child_plus_elderly,두 계수의 합/차 (비중 1%p당),-0.0193579607686798,0.019558151352793,0.322289318434428,"",22749,1620,muni_code + pref_code^year
+H2,level,land,ref_middle,child_minus_elderly,두 계수의 합/차 (비중 1%p당),0.0165293045005283,0.0119069535428562,0.165074321923018,"",22749,1620,muni_code + pref_code^year
+H2-1,level,land,child,log_pop,인구 1% 변화당 가격 % 변화,2.02389216171775,0.12527780697898,1.04323642710378e-58,***,22749,1620,muni_code + pref_code^year
+H2-1,level,land,child,child_rate,비중 1%p 변화당 log 가격 변화 (×100 = %),0.00349971260554691,0.0106920367839598,0.743426211831242,"",22749,1620,muni_code + pref_code^year
+H2-1,level,land,youth,log_pop,인구 1% 변화당 가격 % 변화,1.95289506934129,0.117538323745826,5.43070401689378e-62,***,22749,1620,muni_code + pref_code^year
+H2-1,level,land,youth,youth_rate,비중 1%p 변화당 log 가격 변화 (×100 = %),0.0216685818585859,0.00871631594568188,0.0129195445047473,**,22749,1620,muni_code + pref_code^year
+H2-1,level,land,middle,log_pop,인구 1% 변화당 가격 % 변화,1.87004858093892,0.143995876533865,1.45340907989353e-38,***,22749,1620,muni_code + pref_code^year
+H2-1,level,land,middle,middle_rate,비중 1%p 변화당 log 가격 변화 (×100 = %),0.0174608417739139,0.00927449179482389,0.0597446018652223,*,22749,1620,muni_code + pref_code^year
+H2-1,level,land,elderly,log_pop,인구 1% 변화당 가격 % 변화,1.67330617055186,0.170110071305617,7.83061409632655e-23,***,22749,1620,muni_code + pref_code^year
+H2-1,level,land,elderly,elderly_rate,비중 1%p 변화당 log 가격 변화 (×100 = %),-0.0203171159702295,0.00717331851650848,0.004621192931022,***,22749,1620,muni_code + pref_code^year
+H1,level,condo,pop_only,log_pop,인구 1% 변화당 가격 % 변화,1.22894667048206,0.178869708221507,6.39212708108403e-12,***,5389,375,muni_code + pref_code^year
+H1,level,condo,aging_only,elderly_rate,비중 1%p 변화당 log 가격 변화 (×100 = %),-0.0366517131398668,0.0048940985689626,6.94209819602257e-14,***,5389,375,muni_code + pref_code^year
+H1,level,condo,both,log_pop,인구 1% 변화당 가격 % 변화,0.748483554261558,0.206678954375879,0.000292923251055082,***,5389,375,muni_code + pref_code^year
+H1,level,condo,both,elderly_rate,비중 1%p 변화당 log 가격 변화 (×100 = %),-0.0209742869490651,0.00576561786504793,0.000274954179859025,***,5389,375,muni_code + pref_code^year
+H2,level,condo,ref_middle,log_pop,인구 1% 변화당 가격 % 변화,0.579437337042128,0.230903172451032,0.012092323106264,**,5389,375,muni_code + pref_code^year
+H2,level,condo,ref_middle,child_rate,비중 1%p 변화당 log 가격 변화 (×100 = %),0.0291240838118347,0.0147683509661792,0.0486026832829569,**,5389,375,muni_code + pref_code^year
+H2,level,condo,ref_middle,youth_rate,비중 1%p 변화당 log 가격 변화 (×100 = %),0.00649585788012638,0.0125428666368286,0.604533201669296,"",5389,375,muni_code + pref_code^year
+H2,level,condo,ref_middle,elderly_rate,비중 1%p 변화당 log 가격 변화 (×100 = %),-0.015062926003423,0.00911716346861873,0.0985038784129696,*,5389,375,muni_code + pref_code^year
+H2,level,condo,ref_middle,child_plus_elderly,두 계수의 합/차 (비중 1%p당),0.0140611578084117,0.0218840827267007,0.520529765539644,"",5389,375,muni_code + pref_code^year
+H2,level,condo,ref_middle,child_minus_elderly,두 계수의 합/차 (비중 1%p당),0.0441870098152578,0.011114883857173,7.02371456702988e-05,***,5389,375,muni_code + pref_code^year
+H2-1,level,condo,child,log_pop,인구 1% 변화당 가격 % 변화,0.941369291439013,0.217004237028869,1.43770353429635e-05,***,5389,375,muni_code + pref_code^year
+H2-1,level,condo,child,child_rate,비중 1%p 변화당 log 가격 변화 (×100 = %),0.0296838427796328,0.0103476452931778,0.00412218851039554,***,5389,375,muni_code + pref_code^year
+H2-1,level,condo,youth,log_pop,인구 1% 변화당 가격 % 변화,1.19963080273255,0.174060511384268,5.5000578124002e-12,***,5389,375,muni_code + pref_code^year
+H2-1,level,condo,youth,youth_rate,비중 1%p 변화당 log 가격 변화 (×100 = %),0.00853770909498648,0.00730176712020634,0.242296418617905,"",5389,375,muni_code + pref_code^year
+H2-1,level,condo,middle,log_pop,인구 1% 변화당 가격 % 변화,1.06177958534985,0.187990908854284,1.6229037187324e-08,***,5389,375,muni_code + pref_code^year
+H2-1,level,condo,middle,middle_rate,비중 1%p 변화당 log 가격 변화 (×100 = %),0.0170831487486962,0.00950123516109678,0.0721782098390951,*,5389,375,muni_code + pref_code^year
+H2-1,level,condo,elderly,log_pop,인구 1% 변화당 가격 % 변화,0.748483554261558,0.206678954375879,0.000292923251055082,***,5389,375,muni_code + pref_code^year
+H2-1,level,condo,elderly,elderly_rate,비중 1%p 변화당 log 가격 변화 (×100 = %),-0.0209742869490651,0.00576561786504793,0.000274954179859025,***,5389,375,muni_code + pref_code^year
+H1,ld5,land,pop_only,log_pop,5년간 인구 1% 변화당 가격 % 변화,1.68168975504128,0.185372059064242,1.16884308011269e-19,***,3983,1417,pref_code^period
+H1,ld5,land,aging_only,elderly_rate,5년간 비중 1%p 변화당 log 가격 변화 (×100 = %),-0.0541794756285363,0.00868096901877815,4.34286805374392e-10,***,3983,1417,pref_code^period
+H1,ld5,land,both,log_pop,5년간 인구 1% 변화당 가격 % 변화,1.26213212212638,0.269342179686489,2.78623195407905e-06,***,3983,1417,pref_code^period
+H1,ld5,land,both,elderly_rate,5년간 비중 1%p 변화당 log 가격 변화 (×100 = %),-0.0247539633206923,0.0119440458476077,0.0382193954857459,**,3983,1417,pref_code^period
+H2,ld5,land,ref_middle,log_pop,5년간 인구 1% 변화당 가격 % 변화,1.28891266037242,0.285608140144257,6.39559594610714e-06,***,3983,1417,pref_code^period
+H2,ld5,land,ref_middle,child_rate,5년간 비중 1%p 변화당 log 가격 변화 (×100 = %),0.0146019027682893,0.0223621122380201,0.51377232280523,"",3983,1417,pref_code^period
+H2,ld5,land,ref_middle,youth_rate,5년간 비중 1%p 변화당 log 가격 변화 (×100 = %),0.0237984600960827,0.0214401326289049,0.267000777518384,"",3983,1417,pref_code^period
+H2,ld5,land,ref_middle,elderly_rate,5년간 비중 1%p 변화당 log 가격 변화 (×100 = %),-0.0134642870439609,0.0164640531577296,0.41347194018381,"",3983,1417,pref_code^period
+H2,ld5,land,ref_middle,child_plus_elderly,5년간 두 계수의 합/차 (비중 1%p당),0.00113761572432833,0.0331580210217703,0.972630815925635,"",3983,1417,pref_code^period
+H2,ld5,land,ref_middle,child_minus_elderly,5년간 두 계수의 합/차 (비중 1%p당),0.0280661898122502,0.0210429052692956,0.182282454194711,"",3983,1417,pref_code^period
+H2-1,ld5,land,child,log_pop,5년간 인구 1% 변화당 가격 % 변화,1.64003591490766,0.212912304586916,1.33043150001793e-14,***,3983,1417,pref_code^period
+H2-1,ld5,land,child,child_rate,5년간 비중 1%p 변화당 log 가격 변화 (×100 = %),0.0081476152368386,0.0186101916802487,0.661528414783771,"",3983,1417,pref_code^period
+H2-1,ld5,land,youth,log_pop,5년간 인구 1% 변화당 가격 % 변화,1.56758012239111,0.188146226435592,7.96817744480267e-17,***,3983,1417,pref_code^period
+H2-1,ld5,land,youth,youth_rate,5년간 비중 1%p 변화당 log 가격 변화 (×100 = %),0.0302009866212823,0.0142293422687029,0.033800444072456,**,3983,1417,pref_code^period
+H2-1,ld5,land,middle,log_pop,5년간 인구 1% 변화당 가격 % 변화,1.59536921593648,0.224680019571129,1.24191338471472e-12,***,3983,1417,pref_code^period
+H2-1,ld5,land,middle,middle_rate,5년간 비중 1%p 변화당 log 가격 변화 (×100 = %),0.0107118812775678,0.0157066687184796,0.495241639655855,"",3983,1417,pref_code^period
+H2-1,ld5,land,elderly,log_pop,5년간 인구 1% 변화당 가격 % 변화,1.26213212212638,0.269342179686489,2.78623195407905e-06,***,3983,1417,pref_code^period
+H2-1,ld5,land,elderly,elderly_rate,5년간 비중 1%p 변화당 log 가격 변화 (×100 = %),-0.0247539633206923,0.0119440458476077,0.0382193954857459,**,3983,1417,pref_code^period
+H1,ld5,condo,pop_only,log_pop,5년간 인구 1% 변화당 가격 % 변화,1.23919571930688,0.236407308077666,1.59032657492738e-07,***,958,339,pref_code^period
+H1,ld5,condo,aging_only,elderly_rate,5년간 비중 1%p 변화당 log 가격 변화 (×100 = %),-0.0320480137470803,0.00666308137978787,1.51089902954216e-06,***,958,339,pref_code^period
+H1,ld5,condo,both,log_pop,5년간 인구 1% 변화당 가격 % 변화,0.924994724741525,0.291939584428855,0.00153256367537049,***,958,339,pref_code^period
+H1,ld5,condo,both,elderly_rate,5년간 비중 1%p 변화당 log 가격 변화 (×100 = %),-0.0142391126202079,0.00875480884587218,0.103857512248575,"",958,339,pref_code^period
+H2,ld5,condo,ref_middle,log_pop,5년간 인구 1% 변화당 가격 % 변화,0.89431032123251,0.319224759752513,0.00508645760329205,***,958,339,pref_code^period
+H2,ld5,condo,ref_middle,child_rate,5년간 비중 1%p 변화당 log 가격 변화 (×100 = %),0.00368862020890118,0.0242936424724078,0.879317238355693,"",958,339,pref_code^period
+H2,ld5,condo,ref_middle,youth_rate,5년간 비중 1%p 변화당 log 가격 변화 (×100 = %),-0.000231367641991914,0.019215925250781,0.99039337389692,"",958,339,pref_code^period
+H2,ld5,condo,ref_middle,elderly_rate,5년간 비중 1%p 변화당 log 가격 변화 (×100 = %),-0.014056425210326,0.0142120024356985,0.322637157440497,"",958,339,pref_code^period
+H2,ld5,condo,ref_middle,child_plus_elderly,5년간 두 계수의 합/차 (비중 1%p당),-0.0103678050014248,0.0351902841272386,0.768283237963377,"",958,339,pref_code^period
+H2,ld5,condo,ref_middle,child_minus_elderly,5년간 두 계수의 합/차 (비중 1%p당),0.0177450454192272,0.0186002166294691,0.340071702230333,"",958,339,pref_code^period
+H2-1,ld5,condo,child,log_pop,5년간 인구 1% 변화당 가격 % 변화,1.16842048000822,0.293953329782938,7.04235393808672e-05,***,958,339,pref_code^period
+H2-1,ld5,condo,child,child_rate,5년간 비중 1%p 변화당 log 가격 변화 (×100 = %),0.00732404260472423,0.0177985812297375,0.680708971611589,"",958,339,pref_code^period
+H2-1,ld5,condo,youth,log_pop,5년간 인구 1% 변화당 가격 % 변화,1.20324073709,0.232518215544793,2.28126470722403e-07,***,958,339,pref_code^period
+H2-1,ld5,condo,youth,youth_rate,5년간 비중 1%p 변화당 log 가격 변화 (×100 = %),0.00895399332514052,0.0117795626209253,0.447177166530652,"",958,339,pref_code^period
+H2-1,ld5,condo,middle,log_pop,5년간 인구 1% 변화당 가격 % 변화,1.11328500074106,0.26882620236072,3.45370656232497e-05,***,958,339,pref_code^period
+H2-1,ld5,condo,middle,middle_rate,5년간 비중 1%p 변화당 log 가격 변화 (×100 = %),0.0150124813651943,0.014386978539434,0.296727422573815,"",958,339,pref_code^period
+H2-1,ld5,condo,elderly,log_pop,5년간 인구 1% 변화당 가격 % 변화,0.924994724741525,0.291939584428855,0.00153256367537049,***,958,339,pref_code^period
+H2-1,ld5,condo,elderly,elderly_rate,5년간 비중 1%p 변화당 log 가격 변화 (×100 = %),-0.0142391126202079,0.00875480884587218,0.103857512248575,"",958,339,pref_code^period
