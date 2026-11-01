@@ -28,3 +28,12 @@ Aging_and_real_estate_prices_.pdf
 1030_interm3/torihiki_hedB.csv
 1030_interm3/panel_v3.csv
 1030_interm3/hedonicB_index.csv
+
+# API 키
+.env
+
+# 1031 소득 자료 (원본·패널은 제외, 스크립트·결과표만 커밋)
+1031_interm/raw/
+1031_interm/income_raw.csv
+1031_interm/income_panel.csv
+1031_interm/panel_v4.csv
