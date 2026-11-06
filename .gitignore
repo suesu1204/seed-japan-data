@@ -37,3 +37,19 @@ Aging_and_real_estate_prices_.pdf
 1031_interm/income_raw.csv
 1031_interm/income_panel.csv
 1031_interm/panel_v4.csv
+
+# 1105_interm/1106_interm: 거래 건별·패널 데이터 (00·01 스크립트로 재생성)
+1105_interm/house_trades.csv
+1105_interm/house_hed_trades.csv
+1105_interm/panel_v5.csv
+1106_interm/panel_v5_prev.csv
+1106_interm/panel_v5_min1.csv
+
+# 논문·구글 문서용 원고 (구글 문서가 원본)
+1101_summary/ch5_model_draft.md
+1101_summary/draft_japan_by_hyp.html
+1106_interm/preprocessing_update_1106.md
+1106_interm/preprocessing_update_1106.html
+1106_interm/results_by_hyp.html
+1106_interm/results_final.html
+1106_interm/4_3_2_3_다중공선성_안정성.docx
